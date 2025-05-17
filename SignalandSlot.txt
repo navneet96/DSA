@@ -1,0 +1,82 @@
+1. What is Qt?
+Answer:
+Qt is a free and open-source widget toolkit for creating graphical
+user interfaces as well as cross-platform applications that run on 
+various software and hardware platforms.
+
+2. What is the difference between QWidget and QMainWindow?
+Answer:
+QWidget is the base class for all UI objects in Qt.
+QMainWindow is a specialized widget with predefined slots like menu bar, toolbars, status bar, etc.
+
+Example:
+QMainWindow *window = new QMainWindow();
+window->setCentralWidget(new QTextEdit());
+
+3.What are signals and slots in Qt?
+Answer:
+Signals and slots are used for communication between objects.
+A signal is emitted when a particular event occurs, 
+and slots are functions that are called in response to a particular 
+signal.
+
+Example:
+connect(button,SIGNAL(clicked()),this,SLOT(onButtonClicked()));
+
+Modern syntax:
+connect(button,&QPushButton::clicked,this,&MainWindow::onButtonClicked)
+
+4. What is the Meta-Object Compiler (moc)?
+Answer:
+moc is a code generator that handles Qt's signals and slots mechanism. 
+It processes C++ files that contain Qt's meta-object features 
+(e.g., Q_OBJECT macro).
+
+5. What is Q_OBJECT macro?
+Answer:
+This macro enables the class to use Qt's meta-object system, allowing
+features like signals and slots, properties, and more.
+
+6. How do you create a custom signal and slot?
+Answer:
+class MyWidget : public QWidget{
+    Q_OBJECT
+    public:
+        MyWidget(){}
+
+    signals:
+        void mySignal();
+
+    public slots:
+        void mySlot(){
+            qDebug()<<"Slot Triggered";
+        }
+}
+
+7. What are some commonly used Qt classes?
+Answer:
+
+QString, QList, QMap, QVariant – Data structures
+QPushButton, QLabel, QTextEdit – UI elements
+QMainWindow, QDialog, QWidget – Base windows
+
+8. What is the difference between QThread and QRunnable?
+Answer:
+QThread is a complete thread object and is used when you want more 
+control over threading.
+QRunnable is lightweight and can be used with QThreadPool for 
+simpler tasks.
+
+9. How do you load a UI file created in Qt Designer?
+Answer:
+Use QUiLoader or include the .ui file in a subclass using
+setupUi(this).
+
+Example:
+Ui::MainWindow ui;
+ui.setupUi(this);
+
+10. What is a QVariant?
+Answer:
+QVariant is a container for any type. It is used for storing values in a 
+generic way, especially when the type isn't known at compile time.

@@ -1,0 +1,11 @@
+{
+    
+    "files.associations": {
+        "iostream": "cpp",
+        "ratio": "cpp",
+        "ostream": "cpp",
+        "array": "cpp",
+        "new": "cpp",
+        "type_traits": "cpp"
+    }
+}
