@@ -1,3 +1,4 @@
+//Implementation of Stack using STL
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -11,7 +12,6 @@ int main(){
     q.push(15);
     q.push(14);
     cout<<"size of queue is = "<<q.size()<<endl;
-    q.pop();
     q.pop();
     q.pop();
     cout<<"size of queue is = "<<q.size()<<endl;

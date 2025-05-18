@@ -6,6 +6,8 @@
         "ostream": "cpp",
         "array": "cpp",
         "new": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "unordered_map": "cpp",
+        "map": "cpp"
     }
 }
