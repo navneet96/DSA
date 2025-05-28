@@ -1,6 +1,11 @@
-//Height of Binary Tree
-//longest path between root node and leaf node
 /*
+Height of Binary Tree
+longest path between root node and leaf node
+        1
+       / \
+      3   5
+     / \    \
+    7  11   17
 Time complexity - O(n)
 Space complexity - O(height)
 */
