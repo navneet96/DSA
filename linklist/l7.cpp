@@ -35,7 +35,6 @@ void splitList(Node* &head, Node* & firstHalf, Node* &secondHalf){
     {
         slow = slow->next;
         fast = fast->next->next;
-        ;
     }
 
     firstHalf = head;

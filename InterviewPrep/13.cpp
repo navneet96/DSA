@@ -11,6 +11,7 @@ about which version of the base class to use.
 Class B and class C both inherit from A.
 Class D inherits from both B and C.
 Now D has two copies of A -- one via B, one via C. 
+//Use virtual inheritance to resolve it:
 */ 
 
 #include<iostream>

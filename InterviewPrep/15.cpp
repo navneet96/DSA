@@ -23,13 +23,13 @@ class MyClass {
 int main(){
 
     shared_ptr<MyClass> p1 = make_shared<MyClass>(10);
-  //  {
+    {
         shared_ptr<MyClass> p2 = p1;
-      //  cout<<"Use count: " << p1.use_count()<<endl;
+        cout<<"Use count: " << p1.use_count()<<endl;
         p2->show();
-   // }
+    }
 
-   // cout<<"Use count after p2: "<<p1.use_count()<<endl;
+    cout<<"Use count after p2: "<<p1.use_count()<<endl;
     return 0;
 
 

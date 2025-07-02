@@ -28,7 +28,7 @@ class dummy{
          p = new int();
     }
 
-    dummy(dummy &d){
+    dummy(const dummy &d){
         a = d.a;
         b = d.b;
         p = new int;

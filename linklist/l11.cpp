@@ -71,6 +71,7 @@ bool isPalindrome(Node *head)
     }
 
     //step4 - repeat step 2
+    //again change the list as it is (optional/Good practice)
     temp = middle -> next;
     middle -> next = reverse(temp);
     
@@ -79,7 +80,7 @@ bool isPalindrome(Node *head)
 int main(){
     Node* head = new Node(1);
     head->next = new Node(2);
-    head->next->next = new Node(11);
+    head->next->next = new Node(1);
 
     if(isPalindrome(head)){
         cout<<"List is Palindrome"<<endl;

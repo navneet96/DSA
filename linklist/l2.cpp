@@ -86,8 +86,6 @@ Node * findMiddleFastSlow(Node *head)
         fast = fast->next->next;
     }
     return slow;
-
-
 }
 void reverseListIteration(Node *& head)
 {

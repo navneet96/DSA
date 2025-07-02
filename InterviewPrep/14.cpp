@@ -8,10 +8,10 @@ class MyClass{
 int value;
     public: 
     MyClass(int val) : value(val){
-        cout<<"MyClass (" <<value<< ") constructor"<<endl;
+        cout<<"MyClass constructor"<<endl;
     }
     ~MyClass(){
-        cout<<"MyClass (" <<value<< ") Destroyed"<<endl;
+        cout<<"MyClass Destructor"<<endl;
     }
     
     void display(){
@@ -24,8 +24,8 @@ int main(){
     // MyClass *ptr1 = new MyClass(42);
     // ptr1->display();
     // delete ptr1;
-    unique_ptr<MyClass> ptr = make_unique<MyClass>(42);
 
+    unique_ptr<MyClass> ptr = make_unique<MyClass>(42);
     ptr->display();
 
     cout << "Exiting main\n";

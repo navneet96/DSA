@@ -1,6 +1,4 @@
 //Remove duplicates from a sorted Linked List
-
-
 #include<iostream>
 using namespace std;
 

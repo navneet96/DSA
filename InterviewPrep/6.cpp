@@ -11,11 +11,12 @@ class complex{
     complex():r(0),i(0){}
     complex(int re, int ie): r(re), i(ie){}
     
+    // Overload + operator
     complex operator+(complex &obj){
 
         complex res;
-        res.r += obj.r;
-        res.i += obj.i;
+        res.r = this->r + obj.r;
+        res.i = this->i + obj.i;
         return res;
     }
     void display(){

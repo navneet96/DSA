@@ -8,9 +8,12 @@ class Base{
     Base(){
         cout<<"Base Constructor"<<endl;
     }
-    // Base(int b){
-    //     cout<<"Base Constructor parameter"<<endl;
-    // }
+    Base(int b){
+        cout<<"Base Constructor parameter"<<endl;
+    }
+    ~Base(){
+        cout<<"Base Destructor"<<endl;
+    }
     void show(){
         cout<<"Hello"<<endl;
     }
@@ -26,15 +29,18 @@ class Dervied: public Base{
     Dervied(int d){
         cout<<"Derived counstructor parameter"<<endl;
     }
-    void show1(){
+    ~Dervied(){
+        cout<<"Derevied Destructor"<<endl;
+    }
+    void show(){
         cout<<"hi"<<endl;
     }
 };
 
 int main(){
-   // Base b(10);
+    Base b(10);
     Dervied d(10);
-    d.show1();
+    d.show();
     d.show();
     return 0;
 

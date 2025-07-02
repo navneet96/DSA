@@ -1,7 +1,7 @@
-//Linked List 
-//Traverse
-//Insert A Head,tail,Position
-
+//Creation a Linked List 
+//Travers
+//Insert At Head,tail,Position
+//Deletion at Head,tail,position
 #include<iostream>
 #include<map>
 using namespace std;
@@ -63,6 +63,7 @@ void insertAtPosition(Node* &head, int position, int data){
     if(position == 0){
         newNode->next = head;
         head = newNode;
+        return;
     } 
 
     Node *current = head;
@@ -79,7 +80,6 @@ void insertAtPosition(Node* &head, int position, int data){
     }
 
     //Insert the new node
-
     newNode->next = current->next;
     current->next = newNode;
     
@@ -99,11 +99,13 @@ void deleteAtTail(Node *& head)
     //Empty list
     if(head == nullptr){
         cout<<"List is already empty";
+        return;
     }
     //only one node
     if(head->next==nullptr){
         delete head;
         head = nullptr;
+        return ;
     }
 
     //More than on node

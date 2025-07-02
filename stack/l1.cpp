@@ -5,6 +5,14 @@
 
 using namespace std;
 
+void printStack(stack<int> s){
+    cout<<"Stack element (top to bottom): ";
+    while(!s.empty()){
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+    cout<<endl;
+}
 int main(){
 
     //creation of stack
@@ -13,11 +21,11 @@ int main(){
     //push opreration
     s.push(2);
     s.push(3);
-
+    s.push(4);
     //pop
     s.pop();
 
-    cout<<"Printing top element = "<<s.top()<<endl;
+    cout<<"Top element = "<<s.top()<<endl;
     cout<<"Size of stack = "<<s.size()<<endl;
 
 
@@ -28,7 +36,7 @@ int main(){
     else
         cout<<"Stack is not empty "<<endl;
         
-    
+    printStack(s);
 
 
     return 0;

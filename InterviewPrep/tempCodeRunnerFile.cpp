@@ -1,5 +1,5 @@
-unique_ptr<MyClass> ptr = make_unique<MyClass>(42);
+     simple(const simple& other){
+            data = other.data;
+            cout<<"Copy constructor called"<<endl;
 
-    ptr->display();
-
-    cout << "Exiting main\n";
+        }

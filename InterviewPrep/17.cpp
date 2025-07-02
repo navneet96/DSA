@@ -1,5 +1,8 @@
 //friend function 
-
+/*A friend function is a function that is not a member of a class but has access to the class's private and protected members.
+ This allows external functions to operate on a class's internal data without being part of the class itself
+ */
+//Overuse can weaken encapsulation and increase coupling.
 #include<iostream>
 using namespace std;
 

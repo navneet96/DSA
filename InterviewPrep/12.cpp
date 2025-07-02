@@ -8,9 +8,9 @@ class MyClass{
     
     public:
 
-    //constructor
+    //Pearamerterized constructor
         MyClass(int value) : data(new int(value)){
-            cout<<"Constructor: Allocated data with value "<<*data<<endl;
+            cout<<"Parameterized Constructor: Allocated data with value "<<*data<<endl;
         }
 
         //Destructor
@@ -37,13 +37,14 @@ class MyClass{
 
         //Move Constructor
 
-        MyClass(MyClass&& other) noexcept : data(other.data){
+        MyClass(MyClass&& other) noexcept {
             cout<<"Move Constructor: Moving resource"<<endl;
+            data = other.data;
             other.data = nullptr;
         }
  // Move Assignment Operator
  MyClass& operator=(MyClass&& other) noexcept {
-    std::cout << "Move Assignment: Moving resource\n";
+    cout << "Move Assignment: Moving resource\n";
     if (this != &other) {
         delete data;
         data = other.data;
@@ -55,37 +56,37 @@ class MyClass{
 // Utility function to print the value
 void print() const {
     if (data)
-        std::cout << "Value: " << *data << "\n";
+        cout << "Value: " << *data << "\n";
     else
-        std::cout << "Value: nullptr\n";
+        cout << "Value: nullptr\n";
 }
 };
 
 // ---------------- Main Function ----------------
 
 int main() {
-std::cout << "--- Creating a\n";
-MyClass a(42);
+cout << "--- Creating a\n";
+MyClass a(42); //Parameterized constructor
 
-std::cout << "\n--- Copying a to b\n";
+cout << "\n--- Copying a to b\n";
 MyClass b = a;  // Copy constructor
 
-std::cout << "\n--- Moving a to c\n";
-MyClass c = std::move(a);  // Move constructor
+cout << "\n--- Moving a to c\n";
+MyClass c = move(a);  // Move constructor
 
-std::cout << "\n--- Assigning b to d\n";
+cout << "\n--- Assigning b to d\n";
 MyClass d(0);
 d = b;  // Copy assignment
 
-std::cout << "\n--- Move assigning c to e\n";
+cout << "\n--- Move assigning c to e\n";
 MyClass e(0);
-e = std::move(c);  // Move assignment
+e = move(c);  // Move assignment operator
 
-std::cout << "\n--- Final values:\n";
+cout << "\n--- Final values:\n";
 b.print();
 d.print();
 e.print();
 
-std::cout << "\n--- Exiting main\n";
+cout << "\n--- Exiting main\n";
 return 0;
 }

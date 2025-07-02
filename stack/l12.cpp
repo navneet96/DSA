@@ -1,7 +1,7 @@
 
 // Function to compute the minimum cost to balance the string
 
-   #include <iostream>
+#include <iostream>
 #include <stack>
 #include <string>
 using namespace std;
